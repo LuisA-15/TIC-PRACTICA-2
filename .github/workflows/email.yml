@@ -3,6 +3,8 @@ on:
     branches: [ main, feature_a, feature_b ]
 jobs:
   build:
+    runs-on: ubuntu-latest
+    steps:
     - name: Send email main
       if: ${{ github.ref == 'refs/heads/main'}}
       uses: dawidd6/action-send-mail@v3
