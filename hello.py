@@ -1,1 +1,1 @@
-print()
+print("Shark era")
