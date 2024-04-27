@@ -1,5 +1,4 @@
-on: push
-jobs:
+on:
   push:
     branches: [ main, feature_a, feature_b ]
 jobs:
