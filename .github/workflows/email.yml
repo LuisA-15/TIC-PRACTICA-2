@@ -12,6 +12,8 @@ jobs:
         connection_url: ${{secrets.MAIL_CONNECTION}}
         server_address: smtp.gmail.com
         server_port: 465
+        username: ${{secrets.MAIL_USERNAME}}
+        password: ${{secrets.MAIL_PASSWORD}}
         subject: Cambios subidos a main
         to: samantha.quintero@iteso.mx
         from: Your Biggest Nightmare
@@ -24,6 +26,8 @@ jobs:
         connection_url: ${{secrets.MAIL_CONNECTION}}
         server_address: smtp.gmail.com
         server_port: 465
+        username: ${{secrets.MAIL_USERNAME}}
+        password: ${{secrets.MAIL_PASSWORD}}
         subject: Cambios subidos a rama feature a
         to: samantha.quintero@iteso.mx
         from: Your Biggest Nightmare
@@ -36,6 +40,8 @@ jobs:
         connection_url: ${{secrets.MAIL_CONNECTION}}
         server_address: smtp.gmail.com
         server_port: 465
+        username: ${{secrets.MAIL_USERNAME}}
+        password: ${{secrets.MAIL_PASSWORD}}
         subject: Cambios subidos a rama feature b
         to: samantha.quintero@iteso.mx
         from: Your Biggest Nightmare
