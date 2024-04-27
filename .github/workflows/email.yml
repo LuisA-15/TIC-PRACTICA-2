@@ -1,0 +1,40 @@
+on: push
+jobs:
+  push:
+    branches: [ main, feature_a, feature_b ]
+jobs:
+  build:
+    - name: Send email main
+      if: ${{ github.ref == 'refs/heads/main'}}
+      uses: dawidd6/action-send-mail@v3
+      with:
+        connection_url: ${{secrets.MAIL_CONNECTION}}
+        server_port: 465
+        subject: Cambios subidos a main
+        to: samantha.quintero@iteso.mx
+        from: Your Biggest Nightmare
+        body: Build job of ${{github.repository}} completed successfully!
+
+    - name: Send email feature_a
+      if: ${{ github.ref == 'refs/heads/feature_a'}}
+      uses: dawidd6/action-send-mail@v3
+      with:
+        connection_url: ${{secrets.MAIL_CONNECTION}}
+        server_port: 465
+        subject: Cambios subidos a rama feature a
+        to: samantha.quintero@iteso.mx
+        from: Your Biggest Nightmare
+        body: Build job of ${{github.repository}} completed successfully!
+
+    - name: Send email feature_b
+      if: ${{ github.ref == 'refs/heads/feature_b'}}
+      uses: dawidd6/action-send-mail@v3
+      with:
+        connection_url: ${{secrets.MAIL_CONNECTION}}
+        server_port: 465
+        subject: Cambios subidos a rama feature b
+        to: samantha.quintero@iteso.mx
+        from: Your Biggest Nightmare
+        body: Build job of ${{github.repository}} completed successfully!
+        
+    
