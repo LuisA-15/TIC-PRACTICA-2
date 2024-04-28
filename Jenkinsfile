@@ -7,7 +7,7 @@ pipeline {
 			}
 		}
 		stage('hello') {
-			steps {
+			withPythonEnv('python') {
 				sh 'python hello.py'
 			}
 		}
